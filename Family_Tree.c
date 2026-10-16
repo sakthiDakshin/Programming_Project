@@ -177,3 +177,12 @@ void print_tree_visual(const Person *root, int level) {
         }
     }
 }
+
+void free_family_tree(Person *people[], int count) {
+    for (int i = 0; i < count; i++) {
+        if (people[i] != NULL) {
+            free(people[i]);
+            people[i] = NULL; 
+        }
+    }
+}
